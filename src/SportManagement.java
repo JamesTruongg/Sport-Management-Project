@@ -41,7 +41,7 @@ public class SportManagement {
         cart.add(new JScrollPane(cartList), BorderLayout.CENTER); // Thêm JList vào JScrollPane trong giỏ hàng
 
         // Label hiển thị tổng số items
-        JLabel totalItemsLabel = new JLabel("Total items: 0");
+        JLabel totalItemsLabel = new JLabel("Total sport: 0");
         totalItemsLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
         cart.add(totalItemsLabel, BorderLayout.SOUTH); // Thêm label vào dưới cùng của giỏ hàng
 
@@ -59,7 +59,7 @@ public class SportManagement {
                 public void actionPerformed(ActionEvent e) { // Phương thức xử lý khi nút được bấm
                     cartItems.add(sportsButton.getText()); // Thêm tên môn thể thao vào danh sách các mục trong giỏ hàng
                     cartModel.addElement(sportsButton.getText()); // Cập nhật giao diện
-                    totalItemsLabel.setText("Total items: " + cartItems.size()); // Cập nhật nhãn hiển thị tổng số lượng mục trong giỏ hàng
+                    totalItemsLabel.setText("Total sport: " + cartItems.size()); // Cập nhật nhãn hiển thị tổng số lượng mục trong giỏ hàng
                     JOptionPane.showMessageDialog(frame, sportsButton.getText() + " added to cart!");
                 }
             });
@@ -78,7 +78,7 @@ public class SportManagement {
             public void actionPerformed(ActionEvent e) {
                 cartItems.clear(); // Xóa tất cả môn thể thao trong danh sách giỏ hàng
                 cartModel.clear(); // Xóa dữ liệu trong giao diện
-                totalItemsLabel.setText("Total items: 0"); // Đặt lại nhãn số mục thành 0
+                totalItemsLabel.setText("Total sport: 0"); // Đặt lại nhãn số mục thành 0
                 JOptionPane.showMessageDialog(frame, "Cart cleared!");
             }
         });
